@@ -1,0 +1,30 @@
+{
+  "name": "home-performance-embed-simple",
+  "version": "1.0.0",
+  "description": "Load data from an api and display in tables",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netplusdesign/home-performance-embed-simple.git"
+  },
+  "author": "lburks@netplusdesign.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netplusdesign/home-performance-embed-simple/issues"
+  },
+  "homepage": "https://github.com/netplusdesign/home-performance-embed-simple#readme",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.1",
+    "moment": "^2.26.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-handlebars": "^2.0.0"
+  }
+}

@@ -1,0 +1,40 @@
+    <div class="table-responsive">
+        <table id="SummaryYearly" class="table table-sm text-right">
+            <caption>
+                <p class="small">All power values in <abbr title="Kilowatt hours">kWh</abbr></p>
+                <ol class="small">
+                    <li>Base 65&deg;F</li>
+                </ol>
+            </caption>
+            <thead class="thead-light">
+                <tr>
+                    <th></th>
+                    <th>Used</th>
+                    <th>Solar</th>
+                    <th>Net</th>
+                    <th><abbr title="Average daily usage">ADU</abbr></th>
+                    <th><abbr title="Heating Degree Days">HDD</abbr>&#185;</th>
+                </tr>
+                <tr>
+                    <th class="text-left">Totals</th>
+                    <th>{{round response.totals.used}}</th>
+                    <th>{{round response.totals.solar}}</th>
+                    <th>{{round response.totals.net}}</th>
+                    <th>{{round1 response.totals.adu}}</th>
+                    <th>{{round response.totals.hdd}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each response.items}}
+                <tr>
+                    <td class="text-left"><a href="{{@root.src}}/#/months/summary?house={{@root.house}}&date={{dateYYYY-MM this.date}}" >{{dateYYYY this.date}}</a></td>
+                    <td><a href="{{@root.src}}/#/months/usage?house={{@root.house}}&date={{dateYYYY-MM this.date}}" >{{round this.used}}</a></td>
+                    <td><a href="{{@root.src}}/#/months/generation?house={{@root.house}}&date={{dateYYYY-MM this.date}}" >{{round this.solar}}</a></td>
+                    <td>{{round this.net}}</td>
+                    <td>{{round1 this.adu}}</td>
+                    <td><a href="{{@root.src}}/#/months/temperature?house={{@root.house}}&date={{dateYYYY-MM this.date}}" >{{round this.hdd}}</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
