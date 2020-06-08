@@ -9,7 +9,7 @@ Simple app to load date from [home-performance-flask-api](https://github.com/net
 
 First get Node.
 
-Then close this repo and run:
+Then clone this repo and run:
 
 - `npm install`
 - `grunt`
